@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="2000" maxWidth="2000" prefHeight="681.0" prefWidth="1000.0" snapToPixel="false" style="-fx-background-color: #0723eb;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app1.HelloController">
+   <children>
+      <TabPane prefHeight="691.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="loginTab" text="Log in">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="531.0" prefWidth="1000.0">
+                     <children>
+                        <Button fx:id="loginButton" layoutX="15.0" layoutY="179.0" mnemonicParsing="false" onAction="#onLoginButtonClick" prefHeight="25.0" prefWidth="55.0" text="Login" />
+                        <Label fx:id="name" layoutX="14.0" layoutY="44.0" prefHeight="23.0" prefWidth="91.0" text="Username" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font></Label>
+                        <TextField fx:id="userField" layoutX="14.0" layoutY="74.0" />
+                        <Label fx:id="name1" layoutX="15.0" layoutY="101.0" prefHeight="0.0" prefWidth="119.0" text="Password" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="loginResponse" layoutX="14.0" layoutY="236.0" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="logoutButton" layoutX="916.0" layoutY="31.0" mnemonicParsing="false" onAction="#onLogoutButtonClick" text="Log out" />
+                        <Label fx:id="name1111" layoutX="15.0" layoutY="14.0" prefHeight="0.0" prefWidth="119.0" text="Log in" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="passwordField" layoutX="14.0" layoutY="131.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="registerTab" text="Register">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="registerButton" layoutX="13.0" layoutY="237.0" mnemonicParsing="false" onAction="#onRegisterButtonClick" prefHeight="25.0" prefWidth="94.0" text="Register" />
+                        <Label fx:id="name2" layoutX="14.0" layoutY="44.0" prefHeight="8.0" prefWidth="91.0" text="Username" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="userRegisterField" layoutX="14.0" layoutY="76.0" />
+                        <TextField fx:id="emailRegisterField" layoutX="14.0" layoutY="131.0" />
+                        <Label fx:id="name11" layoutX="14.0" layoutY="101.0" prefHeight="0.0" prefWidth="119.0" text="Email" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="name111" layoutX="14.0" layoutY="14.0" prefHeight="15.0" prefWidth="119.0" text="Register" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="name112" layoutX="14.0" layoutY="156.0" prefHeight="0.0" prefWidth="119.0" text="Password" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="registerResponse1" layoutX="14.0" layoutY="289.0" prefHeight="30.0" prefWidth="385.0" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="registerResponse2" layoutX="14.0" layoutY="319.0" prefHeight="30.0" prefWidth="505.0" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="registerResponse3" layoutX="14.0" layoutY="349.0" prefHeight="30.0" prefWidth="385.0" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="passwordRegisterField" layoutX="14.0" layoutY="186.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab fx:id="historyTab" text="Customer order">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="customerTable" layoutX="14.0" layoutY="14.0" prefHeight="295.0" prefWidth="409.0" style="-fx-background-color: linear-gradient(to bottom, #0BFFE3, #0738eb);" stylesheets="@style.css">
+                          <columns>
+                              <TableColumn fx:id="customerNameColumn" prefWidth="75.0" text="Name" />
+                            <TableColumn fx:id="customerIdPartColumn" prefWidth="75.0" text="Order ID" />
+                            <TableColumn fx:id="customerNamePartColumn" prefWidth="75.0" text="Part" />
+                              <TableColumn fx:id="customerQuantityPartColumn" prefWidth="75.0" text="Quantity" />
+                              <TableColumn fx:id="customerStatusPartColumn" prefWidth="105.0" text="Status" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="refreshButton" layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#onRefreshButtonClick" text="Refresh" />
+                        <Button fx:id="setDeliveredButton" layoutX="303.0" layoutY="360.0" mnemonicParsing="false" onAction="#onSetDeliveredButton" prefHeight="25.0" prefWidth="120.0" text="Set status delivered" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="buyTab" text="Purchase">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="643.0" prefWidth="1000.0">
+                     <children>
+                        <TableView fx:id="partTable" layoutX="417.0" layoutY="119.0" prefHeight="414.0" prefWidth="524.0" style="-fx-background-color: linear-gradient(to bottom, #0BFFE3, #0738eb);" stylesheets="@style.css">
+                           <columns>
+                              <TableColumn fx:id="partIdColumn" prefWidth="61.33331298828125" text="id" />
+                              <TableColumn fx:id="partNameColumn" prefWidth="148.66665649414062" text="name" />
+                              <TableColumn fx:id="partBrandColumn" prefWidth="67.33331298828125" text="brand" />
+                              <TableColumn fx:id="partPriceColumn" prefWidth="65.3333740234375" text="price" />
+                              <TableColumn fx:id="partStockColumn" prefWidth="50.666748046875" text="stock" />
+                              <TableColumn fx:id="partCategoryColumn" prefWidth="105.333251953125" text="category" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <Button fx:id="loadParts" layoutX="138.0" layoutY="119.0" mnemonicParsing="false" onAction="#onLoadPartsClick" text="Load Parts" />
+                        <Label layoutX="27.0" layoutY="43.0" prefHeight="61.0" prefWidth="293.0" text="What parts are you interested in?" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="partCombo" layoutX="25.0" layoutY="228.0" prefHeight="25.0" prefWidth="179.0" />
+                        <Label layoutX="25.0" layoutY="188.0" text="What would you want to buy?" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buyButton" layoutX="25.0" layoutY="313.0" mnemonicParsing="false" onAction="#onBuyButtonClick" text="Buy" />
+                        <Label fx:id="buyResponse" layoutX="25.0" layoutY="397.0" prefHeight="56.0" prefWidth="389.0" textFill="#00b6ff">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Spinner fx:id="amountToBuy" layoutX="25.0" layoutY="267.0" />
+                        <Label fx:id="buyResponse2" layoutX="25.0" layoutY="454.0" prefHeight="50.0" prefWidth="391.0" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="detailsTab" text="Detailed inventory">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="643.0" prefWidth="1000.0">
+                     <children>
+                        <TableView fx:id="gpuTable" layoutX="354.0" layoutY="14.0" prefHeight="200.0" prefWidth="631.0" style="-fx-background-color: linear-gradient(to bottom, #0BFFE3, #0738eb);" stylesheets="@style.css">
+                          <columns>
+                            <TableColumn fx:id="gpuNameColumn" prefWidth="75.0" text="name" />
+                              <TableColumn fx:id="gpuVramColumn" prefWidth="75.0" text="vram" />
+                              <TableColumn fx:id="gpuCoreClockColumn" prefWidth="75.0" text="core clock" />
+                              <TableColumn fx:id="gpuPowerColumn" prefWidth="75.0" text="power" />
+                              <TableColumn fx:id="gpuInterfaceColumn" prefWidth="327.0" text="interface" />
+                          </columns>
+                        </TableView>
+                        <TableView fx:id="cpuTable" layoutX="354.0" layoutY="214.0" prefHeight="200.0" prefWidth="631.0" style="-fx-background-color: linear-gradient(to bottom, #0BFFE3, #0738eb);" stylesheets="@style.css">
+                          <columns>
+                            <TableColumn fx:id="cpuNameColumn" prefWidth="75.0" text="name" />
+                            <TableColumn fx:id="cpuCoresColumn" prefWidth="75.0" text="cores" />
+                              <TableColumn fx:id="cpuThreadsColumn" prefWidth="75.0" text="threads" />
+                              <TableColumn fx:id="cpuBaseClockColumn" prefWidth="75.0" text="base clock" />
+                              <TableColumn fx:id="cpuBoostClockColumn" prefWidth="75.0" text="overclock" />
+                              <TableColumn fx:id="cpuSocketColumn" prefWidth="75.0" text="socket" />
+                              <TableColumn fx:id="cpuTdpColumn" prefWidth="176.0" text="Tdp" />
+                          </columns>
+                        </TableView>
+                        <TableView fx:id="motherboardTable" layoutX="354.0" layoutY="414.0" prefHeight="200.0" prefWidth="632.0" style="-fx-background-color: linear-gradient(to bottom, #0BFFE3, #0738eb);" stylesheets="@style.css">
+                          <columns>
+                            <TableColumn fx:id="moboNameColumn" prefWidth="75.0" text="name" />
+                            <TableColumn fx:id="moboSocketColumn" prefWidth="75.0" text="socket" />
+                              <TableColumn fx:id="moboChipsetColumn" prefWidth="75.0" text="chipset" />
+                              <TableColumn fx:id="moboFormFactorColumn" prefWidth="75.0" text="form" />
+                              <TableColumn fx:id="moboRamSlotsColumn" prefWidth="150.0" text="ram slots" />
+                              <TableColumn fx:id="moboMaxRamColumn" prefWidth="75.0" text="max ram" />
+                              <TableColumn fx:id="moboWifiColumn" prefWidth="102.0" text="wifi" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="loadGpu" layoutX="136.0" layoutY="114.0" mnemonicParsing="false" onAction="#onLoadGPUClick" text="Load GPU" />
+                        <Button fx:id="loadCpu" layoutX="136.0" layoutY="301.0" mnemonicParsing="false" onAction="#onLoadCPUClick" text="Load CPU" />
+                        <Button fx:id="loadMobo" layoutX="136.0" layoutY="502.0" mnemonicParsing="false" onAction="#onLoadMoboClick" text="Load MB" />
+                        <Label layoutX="48.0" layoutY="14.0" prefHeight="32.0" prefWidth="243.0" text="Extra details provider" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="inventoryTab" text="Insert">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="addExistingStock" layoutX="34.0" layoutY="159.0" prefWidth="150.0" />
+                        <Label layoutX="34.0" layoutY="14.0" prefHeight="17.0" prefWidth="189.0" text="Add items in stock" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Spinner fx:id="addExistingStockQuantity" layoutX="34.0" layoutY="195.0" />
+                        <TableView fx:id="allPartTable" layoutX="462.0" layoutY="29.0" prefHeight="414.0" prefWidth="524.0" style="-fx-background-color: linear-gradient(to bottom, #0BFFE3, #0738eb);" stylesheets="@style.css">
+                           <columns>
+                              <TableColumn fx:id="allPartIdColumn" prefWidth="61.33331298828125" text="id" />
+                              <TableColumn fx:id="allPartNameColumn" prefWidth="148.66665649414062" text="name" />
+                              <TableColumn fx:id="allPartBrandColumn" prefWidth="67.33331298828125" text="brand" />
+                              <TableColumn fx:id="allPartPriceColumn" prefWidth="65.3333740234375" text="price" />
+                              <TableColumn fx:id="allPartStockColumn" prefWidth="50.666748046875" text="stock" />
+                              <TableColumn fx:id="allPartCategoryColumn" prefWidth="105.333251953125" text="category" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <Button fx:id="addToExistingStock" layoutX="34.0" layoutY="236.0" mnemonicParsing="false" onAction="#onAddToExistingStock" text="All parts" />
+                        <Button fx:id="seeAllParts" layoutX="363.0" layoutY="208.0" mnemonicParsing="false" onAction="#onLoadExistingStock" text="See all parts" />
+                        <Label fx:id="addToExistingResponse1" layoutX="34.0" layoutY="295.0" prefHeight="30.0" prefWidth="368.0" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="addToExistingResponse2" layoutX="34.0" layoutY="325.0" prefHeight="30.0" prefWidth="360.0" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="insertNewItemTab" text="New Item">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="399.0" text="Add a new item" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="67.0" text="Name" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="newItemName" layoutX="14.0" layoutY="97.0" />
+                        <Label layoutX="14.0" layoutY="122.0" text="Brand" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="newItemBrand" layoutX="14.0" layoutY="152.0" />
+                        <Label layoutX="14.0" layoutY="177.0" text="Price" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="newItemPrice" layoutX="14.0" layoutY="207.0" />
+                        <Label layoutX="14.0" layoutY="234.0" text="Category" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="newItemAdditionalInfoLabel1" layoutX="475.0" layoutY="67.0" text="Info1" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="newItemAdditionalInfo1" layoutX="475.0" layoutY="97.0" />
+                        <Label fx:id="newItemAdditionalInfoLabel2" layoutX="475.0" layoutY="122.0" text="Info2" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="newItemAdditionalInfo2" layoutX="475.0" layoutY="152.0" />
+                        <Label fx:id="newItemAdditionalInfoLabel3" layoutX="475.0" layoutY="177.0" text="Info3" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="newItemAdditionalInfo3" layoutX="475.0" layoutY="207.0" />
+                        <Label fx:id="newItemAdditionalInfoLabel4" layoutX="475.0" layoutY="232.0" text="Info4" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="newItemAdditionalInfo4" layoutX="475.0" layoutY="262.0" />
+                        <Label fx:id="newItemAdditionalInfoLabel5" layoutX="475.0" layoutY="287.0" text="Info5" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="newItemAdditionalInfo5" layoutX="475.0" layoutY="317.0" />
+                        <Button fx:id="newItemAdd" layoutX="474.0" layoutY="414.0" mnemonicParsing="false" onAction="#onNewItemAdd" text="New Item" />
+                        <ComboBox fx:id="newItemCategory" layoutX="14.0" layoutY="264.0" onAction="#onNewItemCategoryChanged" prefWidth="150.0" />
+                        <Label fx:id="newItemAdditionalInfoLabel6" layoutX="475.0" layoutY="344.0" text="Info6" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="newItemAdditionalInfo6" layoutX="475.0" layoutY="374.0" />
+                        <Label fx:id="newItemInsertLabel" layoutX="14.0" layoutY="327.0" prefHeight="0.0" prefWidth="203.0" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>
