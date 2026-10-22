@@ -72,15 +72,18 @@ Helper functions used to validate inputs:
 ### Features
 
 1. Login and account registration forms
-<img width="1080" height="382" alt="image" src="https://github.com/user-attachments/assets/7c9dc2bf-e32a-41bf-91c5-46ed2cb06bdb" />
+<img width="1080" height="383" alt="image" src="https://github.com/user-attachments/assets/4bdb328b-95a7-4863-9aa2-c7b604590d99" />
+
+
 
 2. Orders management:
    - Users can view their placed orders
    - Admins can view all orders and update their status
-<img width="1080" height="383" alt="image" src="https://github.com/user-attachments/assets/c5824a00-733d-422a-abf1-10c80d643292" />
+<img width="1080" height="383" alt="image" src="https://github.com/user-attachments/assets/bded35ea-dda0-4776-8840-4cccf5bfb600" />
+
 
 3. Product browsing and purchasing interface
-<img width="1064" height="383" alt="image" src="https://github.com/user-attachments/assets/72e5367c-707b-4e52-a26f-b40aeb186d50" />
+<img width="1080" height="383" alt="image" src="https://github.com/user-attachments/assets/f18cf104-b60a-485c-9d16-efbb2fe969fb" />
 
 ---
 
@@ -89,6 +92,6 @@ Helper functions used to validate inputs:
 - Adding products to stock
 - Adding completely new items to the inventory  
   *(Admin only)*
-<img width="1084" height="381" alt="image" src="https://github.com/user-attachments/assets/b063e494-2a4e-4207-b24b-f5a0b49d939e" />
+<img width="1080" height="383" alt="image" src="https://github.com/user-attachments/assets/3bc2671d-1da6-4080-a3c4-dc3e1247c6c4" />
 
 ---
